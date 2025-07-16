@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+
+@font-face {
+    font-family: 'ExposureTrialVAR';
+    src: url('/assets/font/ExposureTrial[-20].otf');
+}
+
+@font-face {
+    font-family: 'ExposureTrialVARLight';
+    src: url('/assets/font/ExposureTrial[+40].otf');
+}
+
+@font-face {
+    font-family: 'ExposureTrialVARBold';
+    src: url('/assets/font/ExposureTrial[-40].otf');
+}
+
+@font-face {
+    font-family: 'GeistMono';
+    src: url('/assets/font/GeistMono-Light.ttf');
+}
+
+@font-face {
+    font-family: 'GeistMonoThin';
+    src: url('/assets/font/GeistMono-Thin.ttf');
+}
+
+.ExposureTrialVAR{
+    font-family: 'ExposureTrialVAR';
+}
+
+.ExposureTrialVARLight{
+    font-family: 'ExposureTrialVARLight';
+}
+
+.ExposureTrialVARBold{
+    font-family: 'ExposureTrialVARBold';
+}
+
+.GeistMono{
+    font-family: 'GeistMono';
+}
+
+.GeistMonoThin{
+    font-family: 'GeistMonoThin';
+}
+
+body{
+    background: rgb(236, 230, 218);
+}
+
+.hoverNav{
+    position: relative;
+    display: inline-flex;
+}
+
+.hoverNav::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 0.2px;
+    background-color: #0d7dbb;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.hoverNav:hover::after{
+    width: 100%;
+}
+
+.hoverNavWhite{
+    position: relative;
+    display: inline-flex;
+}
+
+.hoverNavWhite::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 0.2px;
+    background-color: #ffffff;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.hoverNavWhite:hover::after{
+    width: 100%;
+}
+
+.slider{
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    z-index: 10;
+}
+
+.item{
+    position: relative;
+    right: 0;
+    gap: 20px;
+    animation: slide 20s infinite linear;
+}
+
+@keyframes slide {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: 50%;
+    }
+}
+
+.scrollbarHidden::-webkit-scrollbar{
+    background-color: transparent;
+}
+
+@media screen and (max-width:500px){
+    .slider img{
+        width: 100px;
+    }
+    .item{
+           animation: slide 4s infinite linear;
+    }
+}

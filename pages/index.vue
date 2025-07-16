@@ -1,0 +1,9 @@
+<template>
+    <max-width-container>
+    <carousel/>
+    <navbar/>
+    <sliderProduct/>
+    <ProductsHomePage/>
+    <Footer/>
+    </max-width-container>
+</template>
