@@ -14,4 +14,10 @@ export default defineNuxtConfig({
       ApiURL: process.env.API_URL
     }
   },
+  ssr: true,
+  target: 'static',
+  nitro: {
+    preset: 'vercel', 
+    compressPublicAssets: true,
+  },
 });
