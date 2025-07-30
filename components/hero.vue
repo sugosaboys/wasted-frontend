@@ -12,7 +12,7 @@ const { data: Contents, error } = await useFetch(
 </script>
 <template>
     <main class="relative mt-10 md:mt-28 px-5 md:px-17">
-      <img :src="URLIMAGES + Contents.image.url" :alt="Contents"  loading="lazy" class="border-1 w-[100%] h-[70vh] md:h-[80vh] object-cover brightness-[70%]">
+      <img :src="Contents.image.url" :alt="Contents"  loading="lazy" class="border-1 w-[100%] h-[70vh] md:h-[80vh] object-cover brightness-[70%]">
       <div class="flex justify-center align-center">
         <img src="/public/icon/LogoWasted.png" alt="Wasted" loading="lazy" class="absolute top-[140px] w-[100px] md:w-[170px]">
       </div>

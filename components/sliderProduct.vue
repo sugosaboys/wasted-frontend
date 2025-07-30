@@ -13,9 +13,9 @@
     <main class="flex justify-center align-center">
         <div class="slider py-20">
             <div class="item flex">
-                <img v-for="(item, index) in sliderImages" :key="index" :src="URLIMAGES + item.url" :alt="item.name" loading="lazy" />
-                <img v-for="(item, index) in sliderImages" :key="index" :src="URLIMAGES + item.url" :alt="item.name" loading="lazy" />
-                <img v-for="(item, index) in sliderImages" :key="index" :src="URLIMAGES + item.url" :alt="item.name" loading="lazy" />
+                <img v-for="(item, index) in sliderImages" :key="index" :src=" item.url" :alt="item.name" loading="lazy" />
+                <img v-for="(item, index) in sliderImages" :key="index" :src=" item.url" :alt="item.name" loading="lazy" />
+                <img v-for="(item, index) in sliderImages" :key="index" :src=" item.url" :alt="item.name" loading="lazy" />
             </div>
         </div>
     </main>

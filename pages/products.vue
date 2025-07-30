@@ -35,7 +35,7 @@ useHead({
     <section class="flex justify-center align-center pt-10 pb-10">
         <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div v-for="(product , index) in content.slice(0,sliceCount)" :key="index">
-                <img :src="URLIMAGES + product.image.url" alt="products" loading="lazy" class="w-[318px] h-[312px] md:w-[256px] md:h-[256px]">
+                <img :src=" product.image.url" alt="products" loading="lazy" class="w-[318px] h-[312px] md:w-[256px] md:h-[256px]">
                 <h3 class="text-center ExposureTrialVAR font-bold text-[16px] mt-5">{{ product.textShort }}</h3>
                 <div class="flex justify-center align-center">
                     <nuxt-link :to="product.CTA.URL" class="flex mt-2 hoverNav group">
