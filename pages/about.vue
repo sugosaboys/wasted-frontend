@@ -29,7 +29,7 @@ useHead({
    <max-width-container>
    <navbar/>
    <div class="pt-25">
-      <h2 class=" text-left md:text-center text-[32px] md:text-[48px] ExposureTrialVARBold font-bold px-8 md:px-0 pt-5">{{ Contents.Title }}</h2>
+      <h1 class=" text-left md:text-center text-[32px] md:text-[48px] ExposureTrialVARBold font-bold px-8 md:px-0 pt-5">{{ Contents.Title }}</h1>
 
       <section class="flex justify-center items-center pt-[45px] px-8 md:px-15 lg:px-0">
          <img :src=" Contents.hero.url" alt="hero image" class="border-1 w-[380px] h-[380px] md:w-[800px] md:h-[400px] lg:w-[1200px] lg:h-[600px] object-cover" loading="lazy">

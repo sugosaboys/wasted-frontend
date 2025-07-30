@@ -31,7 +31,7 @@ useHead({
 <template>
     <max-width-container>
     <navbar/>
-    <h2 class="text-[32px] md:text-[48px] ExposureTrialVARBold font-bold md:text-center pt-[120px] px-8 md:px-0">wasted products</h2>
+    <h1 class="text-[32px] md:text-[48px] ExposureTrialVARBold font-bold md:text-center pt-[120px] px-8 md:px-0">wasted products</h1>
     <section class="flex justify-center align-center pt-10 pb-10">
         <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div v-for="(product , index) in content.slice(0,sliceCount)" :key="index">
