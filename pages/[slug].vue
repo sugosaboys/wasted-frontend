@@ -110,52 +110,52 @@ const Increase = () => {
   <section class="pt-[130px]">
     <main class="flex flex-col md:flex-row justify-center align-center gap-18">
         <div class="flex flex-col items-center">
-            <img :src="content.ImageWithCaption.image.url" alt="Images" loading="lazy" class="border-1 w-[320px] h-[320px] object-cover">
-            <p class="w-[320px] GeistMono font-bold text-[14px] text-center">{{ content.ImageWithCaption.caption }}</p>
+            <img v-if="content.ImageWithCaption?.image?.url" :src="URLIMAGES + content.ImageWithCaption.image.url" alt="Images" loading="lazy" class="border-1 w-[320px] h-[320px] object-cover">
+            <p v-if="content.ImageWithCaption?.caption" class="w-[320px] GeistMono font-bold text-[14px] text-center">{{ content.ImageWithCaption.caption }}</p>
         </div>
         <div class="flex flex-col items-center">
-            <img :src="content.ImageWithCaption.ImageSecond.url" alt="Images" loading="lazy" class="border-1 w-[318px] h-[210px] md:w-[420px] md:h-[400px] lg:w-[720px] lg:h-[480px] object-cover">
-            <p class="w-[312px] md:w-[418px] lg:w-[730px] GeistMono font-bold text-[14px] text-center">{{ content.ImageWithCaption.captionSecond }}</p>
+            <img v-if="content.ImageWithCaption?.ImageSecond?.url" :src="URLIMAGES + content.ImageWithCaption.ImageSecond.url" alt="Images" loading="lazy" class="border-1 w-[318px] h-[210px] md:w-[420px] md:h-[400px] lg:w-[720px] lg:h-[480px] object-cover">
+            <p v-if="content.ImageWithCaption?.captionSecond" class="w-[312px] md:w-[418px] lg:w-[730px] GeistMono font-bold text-[14px] text-center">{{ content.ImageWithCaption.captionSecond }}</p>
         </div>
     </main>
     <main class="flex flex-col md:flex-row justify-center align-center gap-18 mt-20">
         <div class="flex flex-col items-center">
-            <img v-if="content.ImageWithCaption?.ImageThird?.url" :src="content.ImageWithCaption.ImageThird.url" alt="Images" loading="lazy" class="border-1 w-[318px] h-[312px] md:w-[420px] md:h-[400px] lg:w-[640px] lg:h-[640px] object-cover">
-            <p class="w-[312px] md:w-[418px] lg:w-[650px] GeistMono font-bold text-[14px] text-center">{{ content.ImageWithCaption.captionThird }}</p>
+            <img v-if="content.ImageWithCaption?.ImageThird?.url" :src="URLIMAGES + content.ImageWithCaption.ImageThird.url" alt="Images" loading="lazy" class="border-1 w-[318px] h-[312px] md:w-[420px] md:h-[400px] lg:w-[640px] lg:h-[640px] object-cover">
+            <p v-if="content.ImageWithCaption?.captionThird" class="w-[312px] md:w-[418px] lg:w-[650px] GeistMono font-bold text-[14px] text-center">{{ content.ImageWithCaption.captionThird }}</p>
         </div>
         <div class="flex flex-col items-center">
-            <img v-if="content.ImageWithCaption?.ImageFourth?.url" :src="content.ImageWithCaption.ImageFourth.url" alt="Images" loading="lazy" class="border-1 w-[318px] md:w-[320px] h-[480px] object-cover">
-            <p class="w-[320px] GeistMono font-bold text-[14px] text-center">{{ content.ImageWithCaption.captionFourth }}</p>
+            <img v-if="content.ImageWithCaption?.ImageFourth?.url" :src="URLIMAGES + content.ImageWithCaption.ImageFourth.url" alt="Images" loading="lazy" class="border-1 w-[318px] md:w-[320px] h-[480px] object-cover">
+            <p v-if="content.ImageWithCaption?.captionFourth" class="w-[320px] GeistMono font-bold text-[14px] text-center">{{ content.ImageWithCaption.captionFourth }}</p>
         </div>
     </main>
     <main class="flex justify-center align-center mt-20 px-8 md:px-0">
-        <h2 class="GeistMono w-[732px] text-[15px] text-justify" v-html="marked(content.ImageWithCaption.description)"></h2>
+        <h2 v-if="content.ImageWithCaption?.description" class="GeistMono w-[732px] text-[15px] text-justify" v-html="marked(content.ImageWithCaption.description)"></h2>
     </main>
   </section>
 
    <section class="pt-[130px]">
     <main class="flex flex-col md:flex-row justify-center align-center gap-18">
         <div class="flex flex-col items-center">
-            <img :src="content.ImageCaption.image.url" alt="Images" loading="lazy" class="border-1 w-[318px] h-[312px] md:w-[420px] md:h-[400px] lg:w-[640px] lg:h-[640px] object-cover">
-            <p class="w-[320px] md:w-[418px] lg:w-[680px] GeistMono font-bold text-[14px] text-center">{{ content.ImageCaption.caption }}</p>
+            <img v-if="content.ImageCaption?.image?.url" :src="URLIMAGES + content.ImageCaption.image.url" alt="Images" loading="lazy" class="border-1 w-[318px] h-[312px] md:w-[420px] md:h-[400px] lg:w-[640px] lg:h-[640px] object-cover">
+            <p v-if="content.ImageCaption?.caption" class="w-[320px] md:w-[418px] lg:w-[680px] GeistMono font-bold text-[14px] text-center">{{ content.ImageCaption.caption }}</p>
         </div>
         <div class="flex flex-col items-center">
-            <img :src="content.ImageCaption.ImageSecond.url" alt="Images" loading="lazy" class="border-1 w-[312px] h-[312px] md:w-[320px] md:h-[320px] object-cover">
-            <p class="w-[320px] GeistMono font-bold text-[14px] text-center">{{ content.ImageCaption.captionSecond }}</p>
+            <img v-if="content.ImageCaption?.ImageSecond?.url" :src="URLIMAGES + content.ImageCaption.ImageSecond.url" alt="Images" loading="lazy" class="border-1 w-[312px] h-[312px] md:w-[320px] md:h-[320px] object-cover">
+            <p v-if="content.ImageCaption?.captionSecond" class="w-[320px] GeistMono font-bold text-[14px] text-center">{{ content.ImageCaption.captionSecond }}</p>
         </div>
     </main>
     <main class="flex flex-col md:flex-row justify-center align-center gap-18 mt-20">
         <div class="flex flex-col items-center">
-            <img v-if="content.ImageCaption?.ImageThird?.url" :src="content.ImageCaption.ImageThird.url" alt="Images" loading="lazy" class="border-1 w-[318px] h-[468px] md:w-[360px] md:h-[540px] object-cover">
-            <p class="w-[320px] GeistMono font-bold text-[14px] text-center">{{ content.ImageCaption.captionThird }}</p>
+            <img v-if="content.ImageCaption?.ImageThird?.url" :src="URLIMAGES + content.ImageCaption.ImageThird.url" alt="Images" loading="lazy" class="border-1 w-[318px] h-[468px] md:w-[360px] md:h-[540px] object-cover">
+            <p v-if="content.ImageCaption?.captionThird" class="w-[320px] GeistMono font-bold text-[14px] text-center">{{ content.ImageCaption.captionThird }}</p>
         </div>
         <div class="flex flex-col items-center">
-            <img v-if="content.ImageCaption?.ImageFourth?.url" :src="content.ImageCaption.ImageFourth.url" alt="Images" loading="lazy" class="border-1 w-[318px] h-[468px] md:w-[320px] md:h-[640px] lg:w-[640px] lg:h-[940px] object-cover">
-            <p class="w-[320px] md:w-[418px] lg:w-[680px] GeistMono font-bold text-[14px] text-center">{{ content.ImageCaption.captionFourth }}</p>
+            <img v-if="content.ImageCaption?.ImageFourth?.url" :src="URLIMAGES + content.ImageCaption.ImageFourth.url" alt="Images" loading="lazy" class="border-1 w-[318px] h-[468px] md:w-[320px] md:h-[640px] lg:w-[640px] lg:h-[940px] object-cover">
+            <p v-if="content.ImageCaption?.captionFourth" class="w-[320px] md:w-[418px] lg:w-[680px] GeistMono font-bold text-[14px] text-center">{{ content.ImageCaption.captionFourth }}</p>
         </div>
     </main>
     <main class="flex justify-center align-center mt-20 px-8 md:px-0">
-        <h2 class="GeistMono w-[732px] text-[14px] text-justify" v-html="marked(content.ImageCaption.description)"></h2>
+        <h2 v-if="content.ImageCaption?.description" class="GeistMono w-[732px] text-[14px] text-justify" v-html="marked(content.ImageCaption.description)"></h2>
     </main>
   </section>
 
@@ -185,7 +185,7 @@ const Increase = () => {
     <section class="transition-all duration-600 ease-in-out flex gap-8 relative md:px-50" :style="{left: Left + 'px'}"> 
       <div v-for="(plasticProducts,index) in content.products" :key="index" class="pt-[45px]">       
         <div class="flex flex-col items-center w-[256px]">         
-          <img :src="plasticProducts.image.url" alt="Plastic Product Image" class="w-[256px] h-[256px] object-cover" loading="lazy">
+          <img :src="URLIMAGES + plasticProducts.image.url" alt="Plastic Product Image" class="w-[256px] h-[256px] object-cover" loading="lazy">
           <h3 class="text-center ExposureTrialVAR font-bold text-[16px] mt-5">{{ plasticProducts.textShort }}</h3>        
           <nuxt-link :to="plasticProducts.CTA.URL" class="flex mt-2 hoverNav group">
             <p class="ExposureTrialVAR font-bold text-[14px] group-hover:text-[#0d7dbb]">{{ plasticProducts.CTA.Title }}</p>

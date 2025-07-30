@@ -15,9 +15,4 @@ export default defineNuxtConfig({
     }
   },
   ssr: true,
-  target: 'static',
-  nitro: {
-    preset: 'vercel', 
-    compressPublicAssets: true,
-  },
 });

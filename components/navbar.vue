@@ -25,10 +25,10 @@ const showUp = ref(false);
         showUp ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto'
       ]"
     >
-      <nuxt-link to="/FollowtheWaste">
-        <li class="hoverNav hover:text-[#0d7dbb] h-5 cursor-pointer">About Wasted</li>
+      <nuxt-link to="/about">
+        <li class="hoverNav hover:text-[#0d7dbb] h-5 cursor-pointer">About</li>
       </nuxt-link>
-      <nuxt-link to="/PageWastedProduct">
+      <nuxt-link to="/products">
         <li class="hoverNav hover:text-[#0d7dbb] h-5 cursor-pointer">Collection 001</li>
       </nuxt-link>
       <nuxt-link to="https://shop.potatohead.co/">
