@@ -8,7 +8,7 @@ const showUp = ref(false);
   <nav class="flex flex-col md:flex-row justify-between items-center px-[30px] md:px-[68px] py-3 fixed top-0 left-0 right-0 z-50 bg-[#ece6da] md:bg-transparent">
     <div class="flex justify-between items-center w-full md:w-auto">
       <nuxt-link to="/">
-        <img src="/public/icon/WastedLogo.png" alt="Wasted Logo" class="w-[33px] md:w-[44px] md:h-[50px]" loading="lazy" />
+        <img src="/public/icon/WastedLogo.svg" alt="Wasted Logo" class="w-[33px] md:w-[44px] md:h-[50px]" loading="lazy" />
       </nuxt-link>
       <img
         :src="showUp ? '/icon/xbtn.svg' : '/icon/hamburger.svg'"
