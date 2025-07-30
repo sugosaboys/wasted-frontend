@@ -2,7 +2,7 @@
  <footer class="bg-[rgba(18,17,17,1)] pt-3 pb-5 px-6 md:px-40 text-sm">
   <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8">
     <div class="mt-10">
-        <img src="/public/icon/LogoWasted.png" alt="Wasted" loading="lazy" class="w-[105px]">
+        <img src="/public/icon/Logo.svg" alt="Wasted" loading="lazy" class="w-[105px]">
     </div>
     <div class="font-serif">
       <p class="ExposureTrialVARLight text-[#cec7be] mt-10 md:mt-10">About</p>
