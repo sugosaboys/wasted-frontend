@@ -10,7 +10,7 @@
 </script>
 
 <template>
-    <main class="flex justify-center align-center">
+    <main data-aos="fade-zoom-in" data-aos-duration="1000" class="flex justify-center align-center">
         <div class="slider py-20">
             <div class="item flex">
                 <img v-for="(item, index) in sliderImages" :key="index" :src=" item.url" :alt="item.name" loading="lazy" />

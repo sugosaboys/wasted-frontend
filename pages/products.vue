@@ -31,9 +31,9 @@ useHead({
 <template>
     <max-width-container>
     <navbar/>
-    <h1 class="text-[32px] md:text-[48px] ExposureTrialVARBold font-bold md:text-center pt-[120px] px-8 md:px-0">wasted products</h1>
-    <section class="flex justify-center align-center pt-10 pb-10">
-        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <h1 data-aos="fade-zoom-in" data-aos-duration="1000" class="text-[32px] md:text-[48px] ExposureTrialVARBold font-bold md:text-center pt-[120px] px-8 md:px-0">wasted products</h1>
+    <section  class="flex justify-center align-center pt-10 pb-10">
+        <main data-aos="fade-up" data-aos-duration="1000" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div v-for="(product , index) in content.slice(0,sliceCount)" :key="index">
                 <img :src=" product.image.url" alt="products" loading="lazy" class="w-[318px] h-[312px] md:w-[256px] md:h-[256px]">
                 <h3 class="text-center ExposureTrialVAR font-bold text-[16px] mt-5">{{ product.textShort }}</h3>

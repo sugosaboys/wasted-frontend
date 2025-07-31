@@ -11,7 +11,7 @@ const { data: Contents, error } = await useFetch(
 );
 </script>
 <template>
-    <main class="relative mt-10 md:mt-28 px-5 md:px-17">
+    <main data-aos="fade-zoom-in" data-aos-duration="1000" class="relative mt-10 md:mt-28 px-5 md:px-17">
       <img :src="Contents.image.url" :alt="Contents"  loading="lazy" class="border-1 w-[100%] h-[70vh] md:h-[80vh] object-cover brightness-[70%]">
       <div class="flex justify-center align-center">
         <img src="/public/icon/Logo.svg" alt="Wasted" loading="lazy" class="absolute top-[140px] w-[100px] md:w-[170px]">
@@ -21,6 +21,6 @@ const { data: Contents, error } = await useFetch(
       </div>
     </main>
     <div class="flex justify-center align-center px-6 mt-16">
-      <h4 v-html="marked(Contents.description)" class="text-left md:text-center text-[14px] w-[730px] GeistMono"></h4>
+      <h4 data-aos="fade-up" data-aos-duration="1000" v-html="marked(Contents.description)" class="text-left md:text-center text-[14px] w-[730px] GeistMono"></h4>
     </div>
 </template>
