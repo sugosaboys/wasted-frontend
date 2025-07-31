@@ -1,5 +1,4 @@
 <script setup>
-
 const URLIMAGES = useRuntimeConfig().public.ApiURL;
 const { data: content, error } = await useFetch(`${URLIMAGES}/api/products`, {
   query: {
