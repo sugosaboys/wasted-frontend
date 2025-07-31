@@ -68,7 +68,7 @@ const Increase = () => {
 
 <template>
   <navbar/>
-  <section class="flex md:justify-center items-center pt-[120px] px-8 md:px-0">
+  <section data-aos="fade-zoom-in" data-aos-duration="1000" class="flex md:justify-center items-center pt-[120px] px-8 md:px-0">
     <div>
       <ul class="flex md:justify-center align-center">
         <nuxt-link :to="content.BackButton.URL">
@@ -83,13 +83,13 @@ const Increase = () => {
     </div>
   </section>
 
-  <section class="flex md:justify-center align-center mt-10 px-8 md:px-0">
+  <section data-aos="fade-up" data-aos-duration="1000" class="flex md:justify-center align-center mt-10 px-8 md:px-0">
     <div class="w-[205px] md:w-[806px]">
         <p class="GeistMono text-left text-[14px]" v-html="content.DesignerField"></p>
     </div>
   </section>
 
-  <section class="flex md:justify-center align-center mt-5 px-8 md:px-0">
+  <section data-aos="fade-up" data-aos-duration="1000" class="flex md:justify-center align-center mt-5 px-8 md:px-0">
     <main>
       <div v-for="Contens in content.composition" class="GeistMono flex flex-col md:flex-row md:justify-between md:w-[806px] text-[#1b181a]">
             <p>{{ Contens.Title }}</p>
@@ -98,7 +98,7 @@ const Increase = () => {
     </main>
   </section>
 
-  <section class="flex md:justify-center align-center mt-2 px-8 md:px-0">
+  <section data-aos="fade-up" data-aos-duration="1000" class="flex md:justify-center align-center mt-2 px-8 md:px-0">
     <main>
       <div v-for="Contens in content.composition" class="GeistMono flex flex-col md:flex-row md:justify-between text-[#1b181a] border-[#b6aea8] border-b-1  md:w-[806px] text-[14px] py-2">
             <p>{{ Contens.Composition }}</p>
@@ -108,7 +108,7 @@ const Increase = () => {
   </section>
 
   <section class="pt-[130px]">
-    <main class="flex flex-col md:flex-row justify-center align-center gap-18">
+    <main data-aos="fade-up" data-aos-duration="1000" class="flex flex-col md:flex-row justify-center align-center gap-18">
         <div class="flex flex-col items-center">
             <img v-if="content.ImageWithCaption?.image?.url" :src=" content.ImageWithCaption.image.url" alt="Images" loading="lazy" class="border-1 w-[320px] h-[320px] object-cover">
             <p v-if="content.ImageWithCaption?.caption" class="w-[320px] GeistMono font-bold text-[14px] text-center">{{ content.ImageWithCaption.caption }}</p>
@@ -118,7 +118,7 @@ const Increase = () => {
             <p v-if="content.ImageWithCaption?.captionSecond" class="w-[312px] md:w-[418px] lg:w-[730px] GeistMono font-bold text-[14px] text-center">{{ content.ImageWithCaption.captionSecond }}</p>
         </div>
     </main>
-    <main class="flex flex-col md:flex-row justify-center align-center gap-18 mt-20">
+    <main data-aos="fade-up" data-aos-duration="1000" class="flex flex-col md:flex-row justify-center align-center gap-18 mt-20">
         <div class="flex flex-col items-center">
             <img v-if="content.ImageWithCaption?.ImageThird?.url" :src=" content.ImageWithCaption.ImageThird.url" alt="Images" loading="lazy" class="border-1 w-[318px] h-[312px] md:w-[420px] md:h-[400px] lg:w-[640px] lg:h-[640px] object-cover">
             <p v-if="content.ImageWithCaption?.captionThird" class="w-[312px] md:w-[418px] lg:w-[650px] GeistMono font-bold text-[14px] text-center">{{ content.ImageWithCaption.captionThird }}</p>
@@ -128,13 +128,13 @@ const Increase = () => {
             <p v-if="content.ImageWithCaption?.captionFourth" class="w-[320px] GeistMono font-bold text-[14px] text-center">{{ content.ImageWithCaption.captionFourth }}</p>
         </div>
     </main>
-    <main class="flex justify-center align-center mt-20 px-8 md:px-0">
+    <main data-aos="fade-up" data-aos-duration="1000" class="flex justify-center align-center mt-20 px-8 md:px-0">
         <h2 v-if="content.ImageWithCaption?.description" class="GeistMono w-[732px] text-[15px] text-justify" v-html="marked(content.ImageWithCaption.description)"></h2>
     </main>
   </section>
 
    <section class="pt-[130px]">
-    <main class="flex flex-col md:flex-row justify-center align-center gap-18">
+    <main data-aos="fade-up" data-aos-duration="1000" class="flex flex-col md:flex-row justify-center align-center gap-18">
         <div class="flex flex-col items-center">
             <img v-if="content.ImageCaption?.image?.url" :src=" content.ImageCaption.image.url" alt="Images" loading="lazy" class="border-1 w-[318px] h-[312px] md:w-[420px] md:h-[400px] lg:w-[640px] lg:h-[640px] object-cover">
             <p v-if="content.ImageCaption?.caption" class="w-[320px] md:w-[418px] lg:w-[680px] GeistMono font-bold text-[14px] text-center">{{ content.ImageCaption.caption }}</p>
@@ -144,7 +144,7 @@ const Increase = () => {
             <p v-if="content.ImageCaption?.captionSecond" class="w-[320px] GeistMono font-bold text-[14px] text-center">{{ content.ImageCaption.captionSecond }}</p>
         </div>
     </main>
-    <main class="flex flex-col md:flex-row justify-center align-center gap-18 mt-20">
+    <main data-aos="fade-up" data-aos-duration="1000" class="flex flex-col md:flex-row justify-center align-center gap-18 mt-20">
         <div class="flex flex-col items-center">
             <img v-if="content.ImageCaption?.ImageThird?.url" :src=" content.ImageCaption.ImageThird.url" alt="Images" loading="lazy" class="border-1 w-[318px] h-[468px] md:w-[360px] md:h-[540px] object-cover">
             <p v-if="content.ImageCaption?.captionThird" class="w-[320px] GeistMono font-bold text-[14px] text-center">{{ content.ImageCaption.captionThird }}</p>
@@ -154,12 +154,12 @@ const Increase = () => {
             <p v-if="content.ImageCaption?.captionFourth" class="w-[320px] md:w-[418px] lg:w-[680px] GeistMono font-bold text-[14px] text-center">{{ content.ImageCaption.captionFourth }}</p>
         </div>
     </main>
-    <main class="flex justify-center align-center mt-20 px-8 md:px-0">
+    <main data-aos="fade-up" data-aos-duration="1000" class="flex justify-center align-center mt-20 px-8 md:px-0">
         <h2 v-if="content.ImageCaption?.description" class="GeistMono w-[732px] text-[14px] text-justify" v-html="marked(content.ImageCaption.description)"></h2>
     </main>
   </section>
 
-  <section class="flex justify-center items-center pt-[55px]">
+  <section data-aos="fade-up" data-aos-duration="1000" class="flex justify-center items-center pt-[55px]">
     <div>
       <nuxt-link :to="content.CTA.URL">
       <li class="flex text-center list-none font-bold hoverNav group">
@@ -171,7 +171,7 @@ const Increase = () => {
     </div>
   </section>
 
-  <section class="flex justify-center align-center mt-30 px-8 md:px-8 lg:px-0">
+  <section data-aos="fade-up" data-aos-duration="1000" class="flex justify-center align-center mt-30 px-8 md:px-8 lg:px-0">
     <main class="flex justify-between align-center w-[1120px]">
       <h2 class="ExposureTrialVAR font-bold text-[22px]">{{ content.subTitle }}</h2>
       <div class="flex gap-8">
@@ -181,7 +181,7 @@ const Increase = () => {
     </main>
   </section>
 
-<Slider class="slider-container scrollbarHidden overflow-x-auto overflow-y-auto pb-10 px-8 md:px-0">
+<Slider  class="slider-container scrollbarHidden overflow-x-auto overflow-y-auto pb-10 px-8 md:px-0">
     <section class="transition-all duration-600 ease-in-out flex gap-8 relative md:px-50" :style="{left: Left + 'px'}"> 
       <div v-for="(plasticProducts,index) in content.products" :key="index" class="pt-[45px]">       
         <div class="flex flex-col items-center w-[256px]">         
