@@ -64,6 +64,16 @@ const Increase = () => {
   }
 };
 
+useHead({
+        title:'Potato Head Wasted sustainability collection',
+        link : [
+            {
+                rel:'icon',
+                href:'/icon/WastedLogo.png'
+            }
+        ]
+});
+
 </script>
 
 <template>
